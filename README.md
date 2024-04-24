@@ -2,9 +2,6 @@
  
 This is a minimal Electron application to printer based on the [Quick Start Guide](https://electronjs.org/docs/tutorial/quick-start) within the Electron documentation.
 
-My thanks to [Hubertformin](https://github.com/Hubertformin/electron-pos-printer)
-
-You can learn more about components electron within the [Quick Start Guide](https://electronjs.org/docs/tutorial/quick-start).
 
 ## To Use
 
