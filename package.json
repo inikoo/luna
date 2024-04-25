@@ -1,55 +1,39 @@
 {
-  "name": "luna",
-  "version": "0.0.1",
-  "description": "printer",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "name": "@umijs/electron-template",
+  "version": "1.0.2",
   "scripts": {
-    "test": "mocha",
-    "start": "npm run build && npm run demo",
-    "demo": "electron ./demo/",
-    "clean": "shx rm -rf dist",
-    "build": "npm run clean && webpack",
-    "test:all": "mocha -R mocha-jenkins-reporter --timeout 20000 \"./src/test/**/*test-*.js\"",
-    "test:one": "mocha --watch -u bdd \"./src/test/**/test-*.js\" --grep \"test-login-form\""
+    "dev": "umi dev",
+    "build": "umi build",
+    "postinstall": "umi setup",
+    "setup": "umi setup",
+    "start": "npm run dev"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/inikoo/luna.git"
-  },
-  "keywords": [
-    "electron",
-    "printer",
-    "thermal",
-    "pos"
-  ],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "jsbarcode": "^3.11.5",
-    "qrcode": "^1.5.1"
+    "@ant-design/icons": "^5.3.6",
+    "@ant-design/pro-components": "^2.7.1",
+    "antd": "^5.16.4",
+    "umi": "^4.0.42"
   },
   "devDependencies": {
-    "@electron/remote": "^2.0.8",
-    "@types/node": "^18.7.15",
-    "@types/qrcode": "^1.5.0",
-    "bundle-declarations-webpack-plugin": "^3.1.1",
-    "chai": "^4.2.0",
-    "chai-as-promised": "^7.1.1",
-    "css-loader": "^6.7.1",
-    "css-minimizer-webpack-plugin": "^4.2.2",
-    "electron": "^20.1.1",
-    "html-webpack-plugin": "^5.5.0",
-    "keyv": "^4.5.2",
-    "mini-css-extract-plugin": "^2.6.1",
-    "mocha": "^6.2.3",
-    "shx": "^0.3.4",
-    "spectron": "19.0.0",
-    "terser-webpack-plugin": "^5.3.6",
-    "ts-loader": "^9.4.1",
-    "typescript": "^4.8.2",
-    "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0",
-    "webpack-node-externals": "^1.7.2"
-  }
+    "@tsconfig/node14": "^1.0.3",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@umijs/plugin-electron": "^0.2.0",
+    "electron": "23.1.1",
+    "typescript": "^4.1.2"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "files": [
+    "src/**/*",
+    "tsconfig.json",
+    ".npmrc",
+    ".gitignore",
+    "README.md",
+    ".umirc.ts",
+    "package.json",
+    "typings.d.ts"
+  ]
 }
